@@ -5,6 +5,53 @@ const WHERE = {
   GABIA: '가비아',
 };
 
+const yanoljaContents: IProject.Item = {
+  title: '야놀자 콘텐츠 제작툴 개발',
+  startedAt: '2020-09',
+  endedAt: '2020-09',
+  where: WHERE.YANOLJA,
+  descriptions: [
+    { content: '콘텐츠 제작툴 개발을 통해 마케팅에서 콘텐츠 생성 가능하도록 시스템 개발' },
+    { content: '야놀자 웹에서 툴에 사용될 모듈 개발 및 발행 자동화' },
+  ],
+};
+
+const yanoljaSustain: IProject.Item = {
+  title: '야놀자 통합웹 유지보수',
+  startedAt: '2020-07',
+  endedAt: '2020-08',
+  where: WHERE.YANOLJA,
+  descriptions: [
+    { content: '공정위 지적으로 인한 상품 페이지 내 판매의뢰자 정보 노출' },
+    { content: '웹 내 이미지 갤리러내 마우스 우클릭 방지' },
+  ],
+};
+
+const yanoljaRouletteEvent: IProject.Item = {
+  title: '야놀자 놀력 이벤트 페이지 개선',
+  startedAt: '2020-06',
+  endedAt: '2020-06',
+  where: WHERE.YANOLJA,
+  descriptions: [
+    { content: '2020년 놀력 페이지 개선' },
+    { content: '포인트 이외의 경품 응모 기능 추가' },
+    { content: '룰렛 개발을 통한 고객 참여 증진 및 경험 증진' },
+    { content: '로티 애니메이션 사용을 통한 다이나믹한 콘텐츠 제공' },
+  ],
+};
+
+const yanoljaKTX: IProject.Item = {
+  title: '야놀자 KTX 카테고리 추가',
+  startedAt: '2020-04',
+  endedAt: '2020-05',
+  where: WHERE.YANOLJA,
+  descriptions: [
+    { content: '야놀자 웹에서 KTX 상품 카테고리 추가' },
+    { content: '검색홈 개발 및 검색 기능 구현' },
+    { content: '예약내역 페이지 PC 대응' },
+  ],
+};
+
 const yanoljaGlobalPlace: IProject.Item = {
   title: '야놀자 해외숙소 카테고리 추가',
   startedAt: '2020-01',
@@ -266,6 +313,10 @@ const gabiaDevOps: IProject.Item = {
 const project: IProject.Payload = {
   disable: false,
   list: [
+    yanoljaContents,
+    yanoljaSustain,
+    yanoljaRouletteEvent,
+    yanoljaKTX,
     yanoljaGlobalPlace,
     yanoljaNolEvent,
     yanoljaExhibition,
