@@ -5,6 +5,19 @@ const WHERE = {
   GABIA: '가비아',
 };
 
+const yanoljaRestaurant: IProject.Item = {
+  title: '야놀자 맛집 줄서기 카테고리 추가',
+  startedAt: '2020-11',
+  endedAt: '2021-05',
+  where: WHERE.YANOLJA,
+  descriptions: [
+    { content: '야놀자 앱에 맛집 상품 카테고리 추가' },
+    { content: '앱내에서 맛집 줄서기 기능 및 쿠폰 사용 기능 추가' },
+    { content: '외부 업체와의 데이터 연동 및 협업' },
+    { content: '백엔드 API 퍼포먼스 측정 및 개선' },
+  ],
+};
+
 const yanoljaContents: IProject.Item = {
   title: '야놀자 콘텐츠 제작툴 개발',
   startedAt: '2020-09',
@@ -313,6 +326,7 @@ const gabiaDevOps: IProject.Item = {
 const project: IProject.Payload = {
   disable: false,
   list: [
+    yanoljaRestaurant,
     yanoljaContents,
     yanoljaSustain,
     yanoljaRouletteEvent,
