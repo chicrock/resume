@@ -1,16 +1,16 @@
-import 'jquery/dist/jquery.slim';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/global.css';
 
-import { NextComponentType } from 'next';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
-export default function YosumeApp({
-  Component,
-  pageProps,
-}: {
-  Component: NextComponentType;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pageProps: any;
-}) {
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />;
+export default function ResumeApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      { }
+      <Component {...pageProps} />
+    </>
+  );
 }

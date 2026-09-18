@@ -1,138 +1,87 @@
 import { ISkill } from '../component/skill/ISkill';
 
 const backend: ISkill.Skill = {
-  category: 'Back-end',
+  category: 'Backend',
   items: [
-    {
-      title: 'PHP',
-      level: 3,
-    },
-    {
-      title: 'NodeJS',
-      level: 2,
-    },
-    {
-      title: 'TypeScript',
-      level: 2,
-    },
-    {
-      title: 'GraphQL',
-      level: 1,
-    },
-    {
-      title: 'Apache',
-      level: 1,
-    },
-  ],
-};
-
-const framework: ISkill.Skill = {
-  category: 'Framework',
-  items: [
-    {
-      title: 'Codeigniter',
-      level: 3,
-    },
-    {
-      title: 'Express',
-      level: 1,
-    },
-    {
-      title: 'NestJS',
-      level: 1,
-    },
+    { title: 'Node.js' },
+    { title: 'TypeScript' },
+    { title: 'NestJS' },
+    { title: 'Go' },
+    { title: 'Express' },
+    { title: 'GraphQL' },
+    { title: 'PHP' },
+    { title: 'CodeIgniter' },
+    { title: 'Apache' },
   ],
 };
 
 const database: ISkill.Skill = {
   category: 'Database',
   items: [
-    {
-      title: 'MySQL',
-      level: 2,
-    },
-    {
-      title: 'Oracle',
-      level: 1,
-    },
-    {
-      title: 'Redis',
-      level: 1,
-    },
+    { title: 'MySQL' },
+    { title: 'PostgreSQL' },
+    { title: 'ElasticSearch' },
+    { title: 'Redis' },
+    { title: 'Oracle' },
   ],
 };
 
 const frontend: ISkill.Skill = {
-  category: 'Front-end',
+  category: 'Frontend',
   items: [
-    {
-      title: 'Javascript',
-      level: 2,
-    },
-    {
-      title: 'jQuery',
-      level: 2,
-    },
-    {
-      title: 'TypeScript',
-      level: 2,
-    },
-    {
-      title: 'Next.js',
-      level: 1,
-    },
-    {
-      title: 'Nuxt.js',
-      level: 1,
-    },
-    {
-      title: 'Vue.js',
-      level: 1,
-    },
-    {
-      title: 'HTML/CSS',
-      level: 2,
-    },
+    { title: 'JavaScript' },
+    { title: 'TypeScript' },
+    { title: 'React' },
+    { title: 'Next.js' },
+    { title: 'HTML/CSS' },
+    { title: 'MUI' },
+    { title: 'Vue.js' },
+    { title: 'Nuxt.js' },
+    { title: 'jQuery' },
+  ],
+};
+
+const web3: ISkill.Skill = {
+  category: 'Web3',
+  items: [
+    { title: 'Cosmos SDK' },
+    { title: 'IBC / CCTP' },
+    { title: 'Solidity' },
+    { title: 'Foundry' },
+    { title: 'CosmWasm' },
+    { title: 'Gno' },
+  ],
+};
+
+const infra: ISkill.Skill = {
+  category: 'Infra / DevOps',
+  items: [
+    { title: 'AWS' },
+    { title: 'Docker' },
+    { title: 'Linux' },
+    { title: 'Nginx' },
+    { title: 'GitHub Actions' },
+    { title: 'GitLab CI' },
+    { title: 'Jenkins' },
+    { title: 'Prometheus / Grafana' },
   ],
 };
 
 const etc: ISkill.Skill = {
   category: 'Etc',
   items: [
-    {
-      title: 'Linux',
-    },
-    {
-      title: 'Vim',
-    },
-    {
-      title: 'VSCode',
-    },
-    {
-      title: 'Jira',
-    },
-    {
-      title: 'Confluence',
-    },
-    {
-      title: 'GitLab',
-    },
-    {
-      title: 'Git / Github',
-    },
-    {
-      title: 'Docker',
-    },
-    {
-      title: 'Flutter',
-    },
+    { title: 'Git / GitHub' },
+    { title: 'Jira' },
+    { title: 'Confluence' },
+    { title: 'VSCode' },
+    { title: 'Vim' },
+    { title: 'Flutter' },
   ],
 };
 
 const skill: ISkill.Payload = {
   disable: false,
-  skills: [backend, framework, database, frontend, etc],
-  tooltip: '1: 기초 수준\n2: 중급 수준\n3: 고급 수준',
+  skills: [backend, database, frontend, web3, infra, etc],
 };
 
 export default skill;

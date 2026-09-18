@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 export declare namespace IRow {
   export interface Payload {
     left: Left;
@@ -6,7 +8,7 @@ export declare namespace IRow {
 
   export interface Left {
     title: string;
-    subTitle?: JSX.Element;
+    subTitle?: ReactElement;
   }
 
   export interface Right {

@@ -1,0 +1,532 @@
+.page {
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --accent: #2f55d4;
+  --accent-soft: #e8edfb;
+  --chip: #f1f5f9;
+
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--ink-2);
+  background: var(--bg);
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin-top: -56px;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px 64px;
+}
+
+/* ---------- hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 96px 0 40px;
+}
+
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 32px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.name {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.name small {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.tagline {
+  margin: 8px 0 16px;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  font-size: 13px;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+a.contact:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ---------- stats ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 8px 0 56px;
+}
+
+.stat {
+  min-width: 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.statValue {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.statLabel {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---------- section ---------- */
+.section {
+  margin-bottom: 64px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.sectionLink {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sectionLink:hover {
+  text-decoration: underline;
+}
+
+.intro p {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+/* ---------- featured ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.cardHighlight {
+  grid-column: 1 / -1;
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #cbd5e1;
+}
+
+.cardHighlight .cardTitle {
+  color: #fff;
+  font-size: 20px;
+}
+
+.cardHighlight .cardMeta {
+  color: #94a3b8;
+}
+
+.cardHighlight .chip {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+.cardMeta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.cardSummary {
+  margin: 0;
+  font-size: 14px;
+  flex: 1;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--chip);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+/* ---------- timeline ---------- */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--line);
+}
+
+.job {
+  position: relative;
+  padding-bottom: 36px;
+}
+
+.job:last-child {
+  padding-bottom: 0;
+}
+
+.job::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 3px solid var(--accent);
+}
+
+.jobCurrent::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-soft);
+}
+
+.jobHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+
+.jobTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.jobPosition {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.jobPeriod {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.jobList {
+  margin: 10px 0 12px;
+  padding-left: 18px;
+  font-size: 14.5px;
+}
+
+.jobList li {
+  margin-bottom: 2px;
+}
+
+/* ---------- skills ---------- */
+.skillRow {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.skillRow:last-child {
+  border-bottom: 0;
+}
+
+.skillCategory {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ---------- education / footer ---------- */
+.edu {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14.5px;
+}
+
+.eduSub {
+  color: var(--muted);
+}
+
+.footer {
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 72px;
+    text-align: left;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 24px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .jobPeriod {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media print {
+  .page {
+    background: #fff;
+    margin-top: 0;
+  }
+
+  .hero {
+    padding-top: 24px;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* ---------- detail rows ---------- */
+.row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.rowAside {
+  text-align: right;
+}
+
+.rowPeriod {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.rowBadges {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.badge,
+.badgeAccent {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge {
+  background: var(--chip);
+  color: var(--ink-2);
+}
+
+.badgeAccent {
+  background: var(--accent);
+  color: #fff;
+}
+
+.rowBody {
+  min-width: 0;
+}
+
+.rowTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.rowSub {
+  margin-top: 2px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.rowList {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-size: 14.5px;
+}
+
+.rowList li {
+  margin-bottom: 2px;
+}
+
+.rowList ul {
+  margin: 2px 0 4px;
+  padding-left: 18px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.rowChips {
+  margin-top: 12px;
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .rowAside {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .rowBadges {
+    margin-top: 0;
+  }
+}

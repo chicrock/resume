@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "alwaysStrict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
@@ -17,14 +16,16 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2017",
-    "outDir": "docs"
+    "incremental": true,
+    "plugins": [{ "name": "next" }]
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "docs", "out"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "typedocOptions": {
     "out": "docs/typedoc",
-    "mode": "file",
     "name": "Resume Next.js: TypeDoc",
-    "externalPattern": "!**/I*.ts"
+    "entryPoints": ["component", "payload"],
+    "entryPointStrategy": "expand",
+    "exclude": ["**/I*.ts"]
   }
 }

@@ -1,5 +1,4 @@
-import { faEnvelope, faPhone, faRss } from '@fortawesome/free-solid-svg-icons';
-
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IProfile } from '../component/profile/IProfile';
@@ -8,7 +7,7 @@ import image from '../asset/profile.jpg';
 const profile: IProfile.Payload = {
   disable: false,
 
-  image,
+  image: image.src,
   name: {
     title: '정성락',
     small: '(SungRak, Jung)',
@@ -20,17 +19,14 @@ const profile: IProfile.Payload = {
       icon: faEnvelope,
     },
     {
-      title: '+821089101799',
+      title: '+82 10-8910-1799',
       icon: faPhone,
       badge: true,
     },
     {
+      title: 'github.com/chicrock',
       link: 'https://github.com/chicrock',
       icon: faGithub,
-    },
-    {
-      link: 'https://chicrock.tistory.com/',
-      icon: faRss,
     },
   ],
   notice: {
